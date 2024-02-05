@@ -242,7 +242,7 @@
             const accounts = await web3.eth.getAccounts();
             contract.methods.deploy().send({ 
                 from: accounts[0],
-                gas: 3000000
+                gas: 1000000
             })
                 .then((result) => {
                     showDeploymentResult(result.events.ContractDeployed.returnValues.contractAddress);
